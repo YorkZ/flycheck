@@ -6547,6 +6547,8 @@ warnings."
 Requires GCC 4.4 or newer.  See URL `https://gcc.gnu.org/'."
   :command ("gcc"
             "-fshow-column"
+            "-fno-diagnostics-show-option" ; Do not show the corresponding
+                                        ; warning group
             "-iquote" (eval (flycheck-c/c++-quoted-include-directory))
             (option "-std=" flycheck-gcc-language-standard concat)
             (option-flag "-pedantic" flycheck-gcc-pedantic)
